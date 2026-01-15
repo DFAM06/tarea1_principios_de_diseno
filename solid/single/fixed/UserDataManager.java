@@ -8,20 +8,14 @@ public class UserDataManager {
         
     }
 
-    public void registerUser(String username, String password) {
-        if (validator.validateUsername(username) && validator.validatePassword(password)) {
-            System.out.println("User registered successfully.");
-        } else {
-            System.out.println("Invalid username or password.");
-        }
+    public boolean registerUser(String username, String password) {
+        return validator.validateUsername(username) && validator.validatePassword(password);
+            
     }
 
-    public void loginUser(String username, String password) {
-        if (validator.validateUsername(username) && validator.validatePassword(password)) {
-            System.out.println("User logged in successfully.");
-        } else {
-            System.out.println("Invalid username or password.");
-        }
+    public boolean loginUser(String username, String password) {
+        return validator.validateUsername(username) && validator.validatePassword(password);
+          
     }
 }
 
@@ -37,13 +31,21 @@ class CredentialsValidator{
 
 }
     
-
 class Main{
     public static void main(String[] args) {
         UserDataManager userManager = new UserDataManager(new CredentialsValidator());
 
-        userManager.registerUser("john_doe", "Password123");
+        if (userManager.registerUser("john_doe", "Password123")){
+            System.out.println("User registered successfully.");
+        } else {
+            System.out.println("Invalid username or password.");
+        }
+
+        if (userManager.loginUser("john_doe", "Password123")) {
+            System.out.println("User logged in successfully.");
+        } else {
+            System.out.println("Invalid username or password.");
+        }
      
-        userManager.loginUser("john_doe", "Password123");
     }
 }
