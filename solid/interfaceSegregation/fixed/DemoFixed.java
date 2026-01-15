@@ -1,5 +1,5 @@
 //Client code
-public class DemoOriginal {
+public class DemoFixed {
     public static void main(String[] args) {
         WorkerOriginal employee = new EmployeeOriginal();
         employee.work();
