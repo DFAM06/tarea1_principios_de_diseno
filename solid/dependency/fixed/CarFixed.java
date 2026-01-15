@@ -7,8 +7,9 @@ public class CarFixed {
     }
 
     public void start() {
-        System.out.println("Running car");
+        
         engine.start();
+        System.out.println("Running car");
     }
 }
 
