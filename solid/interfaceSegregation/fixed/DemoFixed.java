@@ -39,7 +39,7 @@ class EmployeeFixed implements WorkerFixed, Eatable, Sleeping {
     }
 }
 
-class RobotOriginal implements WorkerFixed {
+class RobotFixed implements WorkerFixed {
     @Override
     public void work() {
         System.out.println("Robot is working");
