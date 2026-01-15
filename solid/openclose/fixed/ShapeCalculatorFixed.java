@@ -11,7 +11,7 @@ public class ShapeCalculatorFixed {
         shapes.add(shapeOne);
         shapes.add(shapeTwo);
 
-        System.out.println("Total Area" + calculateTotalArea(shapes));
+        System.out.println("Total Area: " + calculateTotalArea(shapes));
     }
 
 
@@ -26,34 +26,7 @@ public class ShapeCalculatorFixed {
     }
 }
 
-abstract class ShapeFixed {
-    public abstract double getArea();
-}
 
-class CircleFixed extends ShapeFixed {
-    private double radius;
 
-    public CircleFixed(double radius) {
-        this.radius = radius;
-    }
 
-    @Override
-    public double getArea(){
-        return Math.PI * Math.pow(radius, 2);
-    }
-}
 
-class RectangleFixed extends ShapeFixed {
-    private double width;
-    private double height;
-
-    public RectangleFixed(double width, double height) {
-        this.width = width;
-        this.height = height;
-    }
-
-    @Override
-    public double getArea(){
-        return width * height;
-    }
-}
