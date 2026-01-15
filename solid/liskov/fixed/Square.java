@@ -1,7 +1,7 @@
-class SquareFixed extends Shape {
+class Square extends Shape {
     private int length;
     
-    public SquareFixed(int length){
+    public Square(int length){
         this.length = length;
     }
 

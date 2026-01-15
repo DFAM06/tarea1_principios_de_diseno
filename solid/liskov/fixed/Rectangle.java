@@ -1,8 +1,8 @@
-class RectangleFixed extends Shape {
+class Rectangle extends Shape {
     private int width;
     private int height;
     
-    public RectangleFixed(int width, int height){
+    public Rectangle(int width, int height){
         this.width = width;
         this.height = height;
     }
