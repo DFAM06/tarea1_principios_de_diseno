@@ -1,0 +1,3 @@
+interface Sleeping {
+    void sleep();
+}
