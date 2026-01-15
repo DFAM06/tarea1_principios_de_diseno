@@ -1,19 +1,19 @@
 public class AreaCalculationFixed {
     public static void main(String[] args) {
-        CalculateArea rectangle = new RectangleFixed(4, 3);
-        CalculateArea square = new SquareFixed(5);
+        Shape rectangle = new RectangleFixed(4, 3);
+        Shape square = new SquareFixed(5);
 
         System.out.println("Area of square: " + square.calculateArea());
         System.out.println("Area of rectangle: " + rectangle.calculateArea());
     }
 }
 
-abstract class CalculateArea {
+abstract class Shape {
 
     public abstract int calculateArea();
 }
 
-class RectangleFixed extends CalculateArea {
+class RectangleFixed extends Shape {
     private int width;
     private int height;
     
@@ -28,7 +28,7 @@ class RectangleFixed extends CalculateArea {
     }
 }
 
-class SquareFixed extends CalculateArea {
+class SquareFixed extends Shape {
     private int length;
     
     public SquareFixed(int length){
